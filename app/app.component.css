@@ -1,11 +1,16 @@
 .invisible{display:none;}
 .map{
-  width: 70%;
+  width: 85%;
   height: 20em;
   margin: 25px;
 }
-.main{display: flex}
-
+.main{
+  display: flex;
+  height: calc(100vh - 100px);
+}
+.footer{
+  text-align: center;
+}
 @media (max-width: 500px){
 
   .main{
@@ -14,7 +19,7 @@
   .map{
     height: auto;
     width: 90%;
-    margin: 2px auto;
+    margin: 5px auto;
   }
   .card-form{
     display: flex;

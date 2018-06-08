@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+declare var ol: any;
 
 @Component({
   selector: 'app-root',
@@ -14,15 +16,27 @@ export class AppComponent {
   personsOnSelectRoom: number;
 
   constructor() {
+    var map = new ol.Map({
+      view: new ol.View({
+        center: [0, 0],
+        zoom: 1
+      }),
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      target: 'map'
+    });
   }
 
   onSubmit() {
-    this.personsOnSelectRoom = this.personsOnRooms[+this.floor  * 15 + this.room];
+    this.personsOnSelectRoom = this.personsOnRooms[+this.floor * 15 + this.room];
     (this.personsOnSelectRoom == 0) ? this.isBusy = false : this.isBusy = true;
     this.visibility = !this.visibility;
   }
 
-  goBack(){
+  goBack() {
     this.visibility = !this.visibility;
   }
 
