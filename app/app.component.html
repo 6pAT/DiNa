@@ -20,38 +20,38 @@
         <button [disabled]="formV.invalid" type="submit" class="btn btn-primary">
           Поиск
         </button>
-        <!--<div *ngFor="let people of personsOnRooms;  index as i;">-->
-        <!--{{i}} {{people}}-->
-        <!--</div>-->
       </form>
     </div>
 
     <div class="form-group">
       <label> Выберите этаж:</label>
     </div>
-    <form action="" class="forma form-control">
-      <label> <input type="radio" [(ngModel)]="floor" name="floor" value="0"> -1 <span class="none">подвальный</span> </label><br>
-      <label><input type="radio" [(ngModel)]="floor" name="floor" value="1"> 0 <span class="none"> первый</span> </label><br>
-      <label><input type="radio" [(ngModel)]="floor" name="floor" value="2"> 1 <span class="none">второй</span> </label><br>
-      <label><input type="radio" [(ngModel)]="floor" name="floor" value="3"> 2 <span class="none">третий</span> </label><br>
-      <label><input type="radio" [(ngModel)]="floor" name="floor" value="4"> 3 <span class="none">четвертый</span> </label><br>
-    </form>
-
+    <div class="card-body">
+      <form action="" class="forma form-control">
+        <label> <input type="radio" [(ngModel)]="floor" name="floor" value="0"> -1 <span class="none">подвальный</span>
+        </label><br>
+        <label><input type="radio" [(ngModel)]="floor" name="floor" value="1"> 0 <span class="none"> первый</span>
+        </label><br>
+        <label><input type="radio" [(ngModel)]="floor" name="floor" value="2"> 1 <span class="none">второй</span>
+        </label><br>
+        <label><input type="radio" [(ngModel)]="floor" name="floor" value="3"> 2 <span class="none">третий</span>
+        </label><br>
+        <label><input type="radio" [(ngModel)]="floor" name="floor" value="4"> 3 <span class="none">четвертый</span>
+        </label><br>
+      </form>
+    </div>
   </div>
   <div [ngClass]="{invisible: visibility}">
     <p>Аудитория {{room}}</p>
-    <div *ngIf="isBusy" class="back"> Занята, {{personsOnSelectRoom}} человек </div>
+    <div *ngIf="isBusy" class="back"> Занята, {{personsOnSelectRoom}} человек</div>
     <div *ngIf="!isBusy" class="back"> Свободно</div>
-    <div class="back"><button type="submit" class="btn btn-primary" (click)="goBack()">
-      goBack
-    </button>
+    <div class="back">
+      <button type="submit" class="btn btn-primary" (click)="goBack()">
+        goBack
+      </button>
     </div>
   </div>
+</div>
 
-</div>
-<div class="footer">
-  <p>CampoRoom 2018</p>
-  <p>All rights reserved</p>
-</div>
 
 

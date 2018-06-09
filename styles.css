@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+.invisible{display:none;}
+.map{
+  width: 85%;
+  height: 100%;
+  margin: 25px;
+}
+.main{
+  display: flex;
+  height: calc(100vh - 100px);
+}
+.footer{
+  text-align: center;
+}
+@media (max-width: 500px){
+
+  .main{
+    display: block;
+  }
+  .map{
+    height: auto;
+    width: 90%;
+    margin: 5px auto;
+  }
+  .card-form{
+    display: flex;
+    justify-content: center;
+  }
+  button{
+    margin-left: 13px;
+  }
+  .forma{
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer{
+    display: none;
+  }
+  .none{
+    display: none;
+  }
+  p{
+    text-align: center;
+    margin: 9px;
+  }
+  .back{
+    text-align: center;
+    padding-top: 7px;
+  }
+}

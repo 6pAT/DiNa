@@ -18,8 +18,8 @@ export class AppComponent {
   constructor() {
     var map = new ol.Map({
       view: new ol.View({
-        center: [0, 0],
-        zoom: 1
+        center: [48.48301, 9.18742],
+        zoom: 4
       }),
       layers: [
         new ol.layer.Tile({
